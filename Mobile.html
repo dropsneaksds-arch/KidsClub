@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>KidsClub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    :root {
+      --blue: #0ea5e9;
+      --blue-dark: #0284c7;
+      --blue-light: #e0f2fe;
+      --text-dark: #0f172a;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: white;
+      color: var(--text-dark);
+      text-align: center;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+      color: white;
+      padding: 50px 16px 80px;
+      border-bottom-left-radius: 40px;
+      border-bottom-right-radius: 40px;
+    }
+
+    header h1 {
+      font-size: 28px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 16px;
+      opacity: 0.95;
+    }
+
+    .btn {
+      margin-top: 20px;
+      width: 100%;
+      max-width: 320px;
+      padding: 14px;
+      border-radius: 999px;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      background: white;
+      color: var(--blue-dark);
+      cursor: pointer;
+    }
+
+    section {
+      padding: 50px 16px;
+    }
+
+    .section-title {
+      font-size: 24px;
+      color: var(--blue-dark);
+      margin-bottom: 30px;
+    }
+
+    /* PROGRAMS */
+    .card {
+      background: white;
+      border-radius: 26px;
+      box-shadow: 0 12px 30px rgba(14,165,233,0.2);
+      margin-bottom: 24px;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .card h3 {
+      margin: 16px 0 6px;
+      color: var(--blue-dark);
+    }
+
+    .card p {
+      padding-bottom: 16px;
+      font-size: 15px;
+      opacity: 0.85;
+    }
+
+    /* PRICING */
+    .price {
+      font-size: 32px;
+      color: var(--blue);
+      margin: 10px 0 20px;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--blue-dark);
+      color: white;
+      padding: 20px;
+      font-size: 14px;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>KidsClub ☁️</h1>
+  <p>לומדים, משחקים ונהנים – מותאם לטלפון</p>
+  <button class="btn" onclick="location.href='join.html'">
+    הצטרפות עכשיו
+  </button>
+</header>
+
+<section>
+  <h2 class="section-title">התוכניות שלנו</h2>
+
+  <div class="card">
+    <img src="R.jpeg">
+    <h3>Kids Live ☁️</h3>
+    <p>שיעורים חיים עם מדריכים</p>
+  </div>
+
+  <div class="card">
+    <img src="G.jpeg">
+    <h3>Kids Games 🎮</h3>
+    <p>למידה דרך משחק</p>
+  </div>
+
+  <div class="card">
+    <img src="art.jpeg">
+    <h3>Arts And Crafts 🌈</h3>
+    <p>תוכן זמין בכל זמן</p>
+  </div>
+</section>
+
+<section style="background: var(--blue-light); border-radius: 40px;">
+  <h2 class="section-title">מחירים</h2>
+
+  <div class="card">
+    <h3>חודש בסיסי</h3>
+    <div class="price">₪49</div>
+    <button class="btn">הצטרפות</button>
+  </div>
+
+  <div class="card">
+    <h3>חודש מתקדם</h3>
+    <div class="price">₪79</div>
+    <button class="btn">הצטרפות</button>
+  </div>
+
+  <div class="card">
+    <h3>שנתי</h3>
+    <div class="price">₪499</div>
+    <button class="btn">הצטרפות</button>
+  </div>
+</section>
+
+<footer>
+  © 2025 KidsClub  
+  <br>
+  <a href="index.html" style="color:white;">חזרה לאתר המלא</a>
+</footer>
+
+</body>
+</html>

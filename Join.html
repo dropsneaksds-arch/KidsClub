@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>KidsClub - הצטרפות</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <style>
+    :root {
+      --blue: #0ea5e9;
+      --blue-dark: #0284c7;
+      --blue-light: #e0f2fe;
+      --white: #ffffff;
+      --text-dark: #0f172a;
+      --bg-main: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg-main);
+      color: var(--text-dark);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+      border-bottom-left-radius: 60px;
+      border-bottom-right-radius: 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    header h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    .sun {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      font-size: 60px;
+      animation: pulse 4s infinite;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .cloud {
+      position: absolute;
+      background: white;
+      border-radius: 50px;
+      opacity: 0.9;
+      animation: moveClouds linear infinite;
+    }
+
+    .cloud::before,
+    .cloud::after {
+      content: "";
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+    }
+
+    .cloud::before {
+      width: 40px;
+      height: 40px;
+      top: -20px;
+      left: 8px;
+    }
+
+    .cloud::after {
+      width: 60px;
+      height: 60px;
+      top: -30px;
+      right: 8px;
+    }
+
+    .cloud-1 {
+      width: 120px;
+      height: 40px;
+      top: 50px;
+      left: -150px;
+      animation-duration: 40s;
+    }
+
+    .cloud-2 {
+      width: 180px;
+      height: 50px;
+      top: 120px;
+      left: -250px;
+      animation-duration: 60s;
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 60px 20px;
+    }
+
+    .signup-form {
+      background: var(--blue-light);
+      border-radius: 50px;
+      padding: 50px 30px;
+      max-width: 450px;
+      width: 100%;
+      box-shadow: 0 15px 35px rgba(14,165,233,0.25);
+      text-align: center;
+    }
+
+    .signup-form h2 {
+      color: var(--blue-dark);
+      margin-bottom: 30px;
+    }
+
+    .signup-form input {
+      width: 100%;
+      padding: 14px 20px;
+      margin-bottom: 20px;
+      border-radius: 24px;
+      border: 2px solid var(--blue-dark);
+      font-size: 16px;
+      outline: none;
+    }
+
+    .signup-form input:focus {
+      border-color: var(--blue);
+    }
+
+    .signup-form button {
+      padding: 14px 28px;
+      border-radius: 999px;
+      font-size: 16px;
+      border: none;
+      background: var(--blue-dark);
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .signup-form button:hover {
+      background: var(--blue);
+      transform: translateY(-3px);
+    }
+
+    /* ================= ABOUT US ================= */
+    .about-us {
+      background: var(--blue-light);
+      border-radius: 40px;
+      padding: 50px 30px;
+      margin: 40px 20px 0;
+      text-align: center;
+      box-shadow: 0 10px 25px rgba(14,165,233,0.2);
+    }
+
+    .about-us h2 {
+      color: var(--blue-dark);
+      margin-bottom: 20px;
+    }
+
+    .about-us p {
+      font-size: 16px;
+      opacity: 0.9;
+    }
+
+    footer {
+      background: var(--blue-dark);
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      border-top-left-radius: 40px;
+      border-top-right-radius: 40px;
+      margin-top: auto;
+    }
+
+    @keyframes moveClouds {
+      from { transform: translateX(0); }
+      to { transform: translateX(140vw); }
+    }
+
+    @keyframes pulse {
+      0%,100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <a href="HomePage.html" class="sun" title="חזור לדף הבית">☀️</a>
+  <div class="cloud cloud-1"></div>
+  <div class="cloud cloud-2"></div>
+  <h1>הצטרפות ל-KidsClub ☁️</h1>
+  <p>הצטרפו עכשיו ותתחילו ליהנות מלמידה ומשחקים!</p>
+</header>
+
+<div class="container">
+  <form class="signup-form">
+    <h2>טופס הצטרפות</h2>
+    <input type="text" placeholder="שם מלא" required>
+    <input type="email" placeholder="דואר אלקטרוני" required>
+    <input type="password" placeholder="סיסמה" required>
+    <button type="submit">הצטרף עכשיו</button>
+  </form>
+</div>
+
+<section class="about-us">
+  <h2>עלינו</h2>
+  <p>עלינו:
+KidsClub הוא מועדון חינוכי ובטוח לילדים, שבו לומדים, משחקים ומפתחים יצירתיות בכיף. המדריכים שלנו מספקים פעילויות חווייתיות, שיעורים ומשחקים אינטראקטיביים המותאמים לגיל הילדים. במועדון שלנו הילדים יכולים לפתח חשיבה יצירתית, כישורי פתרון בעיות ומיומנויות חברתיות, תוך כדי הנאה ובטיחות מלאה. KidsClub שואף להיות מקום צבעוני, מהנה ומעורר השראה שבו כל ילד יכול לגלות את כישוריו וליהנות מלמידה בכיף.</p>
+</section>
+
+<footer>
+  © 2025 KidsClub
+</footer>
+
+</body>
+</html>
